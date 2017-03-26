@@ -55,6 +55,14 @@ app.get('/bad', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  let context = {
+    pageTitle: 'Projects Page',
+    placeholder: 'projects to be displayed here.'
+  };
+  res.render('projects.hbs', context);
+});
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
